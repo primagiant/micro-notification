@@ -1,0 +1,7 @@
+### Login
+POST http://localhost/portofolio/api/login?email=super.admin@porto.id&password=password
+
+### Logout
+POST http://api.porto.test/api/logout
+Accept: application/json
+Authorization: Bearer 1|C6cEXMOosr6TMbJ0X0lf0DUd8RXh8cqjMZ71cWyp
