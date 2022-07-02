@@ -1,11 +1,15 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import cors from 'cors';
 import authRoute from "./routes/auth.js"
 import notifikasiRoute from "./routes/notifikasi.js"
 
 // Global Variable
 const app = express();
 const port = 3000;
+
+// Middlwares
+app.use(cors({origin: '*'}));
 
 // conect to mongodb
 mongoose.connect("mongodb://localhost:27017/porto_notification",{
@@ -28,6 +32,7 @@ app.use(express.json());
 // routes
 app.use('/auth', authRoute);
 app.use('/notifikasi', notifikasiRoute);
+
 
 // for console information and running the server
 app.listen(port, () => console.log(`Example app listening on port http://localhost:${port}!`));

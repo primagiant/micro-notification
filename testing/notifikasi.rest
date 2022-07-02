@@ -12,10 +12,10 @@ POST http://localhost:3000/notifikasi/
 Content-Type: application/json
 
 {
-    "senderId": 1,
-    "receiverId": 3,
-    "title": "Notifikasi 2",
-    "message": "Ini merupakan notifikasi 2",
+    "senderId": 4,
+    "receiverId": 2,
+    "title": "Notifikasi 4",
+    "message": "Ini merupakan notifikasi 4",
     "isRead": false
 }
 
@@ -32,4 +32,4 @@ Content-Type: application/json
 }
 
 ### Delete Notifikasi
-DELETE http://localhost:3000/notifikasi/62b53d2b0a6d2d93f13f1fb1
+DELETE http://localhost:3000/notifikasi/62c0514591f394caa199134b
