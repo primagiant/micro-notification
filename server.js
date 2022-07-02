@@ -6,16 +6,6 @@ import notifikasiRoute from "./routes/notifikasi.js"
 // Global Variable
 const app = express();
 const port = 3000;
-const posts = [
-  {
-    username: "admin",
-    title: "admin"
-  },
-  {
-    username: "user1",
-    title: "User 1"
-  }
-];
 
 // conect to mongodb
 mongoose.connect("mongodb://localhost:27017/porto_notification",{

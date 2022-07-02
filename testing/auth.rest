@@ -1,0 +1,11 @@
+### login
+POST http://localhost:3000/auth/login/
+Content-Type: application/json
+
+{
+    "username": "admin"
+}
+
+### posts
+POST http://localhost:3000/auth/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2NTYwMzY5Nzh9.LI6E1Vl_fCnLP5cvNDblENbh5c0a1Ok2uLCj01Q3Zgs

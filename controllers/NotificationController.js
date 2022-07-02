@@ -12,10 +12,22 @@ export const getAllNotification = async (req, res) => {
     }
 }
 
-// get Notification by id
-export const getNotificationID = async (req, res) => {
+// get Notification by receiverId
+export const getNotificationByReceiver = async (req, res) => {
     try {
-        const notification = await Notification.findById(req.params.id);
+        const notification = await Notification.find({receiverId:req.params.receiverId});
+        res.status(200).json(notification);
+    } catch (error) {
+        res.status(500).json({
+            message: error.message
+        });
+    }
+}
+
+// get Notification by senderId
+export const getNotificationBySender = async (req, res) => {
+    try {
+        const notification = await Notification.find({senderId:req.params.senderId});
         res.status(200).json(notification);
     } catch (error) {
         res.status(500).json({

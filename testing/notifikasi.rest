@@ -1,0 +1,35 @@
+### Notifikasi
+GET http://localhost:3000/notifikasi/
+
+### Notifikasi By Sender
+GET http://localhost:3000/notifikasi/1/send
+
+### Notifikasi By Receiver
+GET http://localhost:3000/notifikasi/1/receive
+
+### Create Notifikasi
+POST http://localhost:3000/notifikasi/
+Content-Type: application/json
+
+{
+    "senderId": 1,
+    "receiverId": 3,
+    "title": "Notifikasi 2",
+    "message": "Ini merupakan notifikasi 2",
+    "isRead": false
+}
+
+### Update Notifikasi
+PUT http://localhost:3000/notifikasi/62b53d1a0a6d2d93f13f1faf
+Content-Type: application/json
+
+{
+    "senderId": 2,
+    "receiverId": 1,
+    "title": "Notifikasi 3",
+    "message": "Ini merupakan notifikasi 3",
+    "isRead": true
+}
+
+### Delete Notifikasi
+DELETE http://localhost:3000/notifikasi/62b53d2b0a6d2d93f13f1fb1
